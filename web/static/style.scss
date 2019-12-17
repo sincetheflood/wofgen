@@ -1,0 +1,75 @@
+@use 'assets/remedy';
+
+html {
+	background-color: #fefefe;
+}
+
+body {
+  display: block;
+
+	max-width: 800px;
+	margin: 2em auto 0;
+	padding: 1em;
+
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	text-align: justify;
+	color: #454545;
+}
+
+main {
+	height: 100%;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 800px;
+	margin: 2em auto 0;
+  padding: 1em;
+  
+	text-align: center;
+
+	p {
+		margin: 0;
+		font-size: small;
+	}
+}
+
+a {
+	color: #07a;
+}
+
+a:visited {
+	color: #941352;
+}
+
+small {
+	font-size: .4em;
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		text-align: left;
+	}
+	div.fancyPositioning div.picture-left,
+	div.fancyPositioning div.tleft {
+		float: none;
+		width: inherit;
+	}
+	blockquote span {
+		width: 80%;
+	}
+	blockquote author {
+		padding-top: 1em;
+		width: 80%;
+		margin-left: 15%;
+	}
+	blockquote author:before {
+		content: "";
+		margin-right: inherit;
+	}
+}

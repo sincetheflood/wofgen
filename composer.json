@@ -1,0 +1,18 @@
+{
+    "name": "wychmire/wof-oc-gen",
+    "description": "A Wings of Fire Character generator",
+    "type": "project",
+    "require": {
+        "php": ">=7.3"
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    },
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Caleb JA",
+            "email": "skywise@tutanota.de"
+        }
+    ]
+}
