@@ -1,32 +1,32 @@
 *,
 ::before,
 ::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	display: block;
-	margin: 0;
+  display: block;
+  margin: 0;
 
-	background-color: #fdf6ee;
+  background-color: #fdf6ee;
   color: #454545;
-  
+
   font-family: sans-serif;
   font-size: 1.6ch;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	margin: auto;
-	padding: 2ch;
-	max-width: 70ch;
-	height: 100vh;
+  margin: auto;
+  padding: 2ch;
+  max-width: 70ch;
+  height: 100vh;
 }
 
 article {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 footer {
@@ -37,4 +37,6 @@ footer {
   }
 }
 
-a {color:#07f}
+a {
+  color: #07f;
+}
