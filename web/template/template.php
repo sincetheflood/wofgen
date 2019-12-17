@@ -23,10 +23,10 @@
   </main>
 
   <footer>
-    <p>Inspired by the <a href="https://perchance.org/wofocgen-testversion">WoF OC Generator</a> hosted on perchance.org.</p>
+    <p>Based on the <a href="https://perchance.org/wofocgen-testversion">WoF OC Generator</a> hosted on perchance.org.</p>
     <p>Written in PHP. <a href="https://git.sr.ht/~wychmire/wofocgen">Opensource</a> and available under the ISC license.</p>
-    <p><?php site_version(); ?></p>
     <p>Created by Wychmire - Hosted by Heroku</p>
+    <p><?php site_version(); ?></p>
   </footer>
 </body>
 
