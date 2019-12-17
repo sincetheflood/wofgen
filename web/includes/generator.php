@@ -221,13 +221,13 @@ $horn_appearance_options = $horn_appearance_shared;
 
 
 // Determine the dragon's job
-if ($tribe === "_leafWing") {
+if ($tribe === "LeafWing") {
   global $job_options;
   $job_options = \array_diff($job_shared, $job_remove_leaf);
   shuffle($job_options);
 } else {
   global $job_options;
-  $job_options = $body_description_shared;
+  $job_options = $job_shared;
 }
 
 
