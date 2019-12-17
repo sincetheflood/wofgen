@@ -177,7 +177,6 @@ if ($nobility_chance >= 80) {
 }
 
 
-
 // Determine the dragon's tribe
 if ($hybrid_chance >= 80) {
   global $is_hybrid, $tribe;
@@ -189,8 +188,6 @@ if ($hybrid_chance >= 80) {
   $is_hybrid = false;
   $tribe = "$tribe_options[0]";
 }
-
-
 
 
 // Determine the dragon's markings based on their tribe.
@@ -248,6 +245,7 @@ if ($tribe === "_iceWing") {
   global $location_options;
   $location_options = $location_pyrrhia_shared;
 }
+
 
 // Determine the dragon's hobby
 $hobby_options = $hobby_shared;
