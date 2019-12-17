@@ -5,7 +5,7 @@
  */
 function site_name()
 {
-    echo config('name');
+  echo config('name');
 }
 
 /**
@@ -13,7 +13,7 @@ function site_name()
  */
 function site_version()
 {
-    echo config('version');
+  echo config('version');
 }
 
 /**
@@ -21,5 +21,5 @@ function site_version()
  */
 function init()
 {
-    require config('template_path') . '/template.php';
+  require config('template_path') . '/template.php';
 }
