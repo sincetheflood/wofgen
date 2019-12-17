@@ -12,4 +12,4 @@ Benefits of the re-write:
 *: When not in use the site will "fall asleep", increasing the first load time. Once awake the site should load within the given timespan.
 
 ### License
-All PHP, HTML, and CSS code is under the ISC License. Files in the `web/resources/` directory are in the public domain.
+All files except those that are in the `web/resources/` directory are under the ISC License. Files in the `web/resources/` directory are in the public domain.
