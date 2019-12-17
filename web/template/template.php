@@ -10,21 +10,23 @@
 </head>
 
 <body>
-  <header>
-    <h1><?php site_name(); ?></h1>
-  </header>
-
   <main>
-    <?php require 'includes/generator.php'; ?>
-  </main>
+    <header>
+      <h1><?php site_name(); ?></h1>
+    </header>
 
-  <footer>
-    <p>Reload the page to generate a new character.</p>
-    <p>Based on the <a href="https://perchance.org/wofocgen-testversion">WoF OC Generator</a> hosted on perchance.org.</p>
-    <p>Written in PHP. <a href="https://git.sr.ht/~wychmire/wofocgen">Opensource</a> and available under the ISC license.</p>
-    <p>Created by Wychmire - Hosted by Heroku</p>
-    <p><?php site_version(); ?></p>
-  </footer>
+    <article>
+      <?php require 'includes/generator.php'; ?>
+    </article>
+
+    <footer>
+      <p><a href="#" onclick="window.location.reload(false);">Reload</a> the page to generate a new character.<noscript> (Enable Javascript to use the link)</noscript></p>
+      <p>Based on the <a href="https://perchance.org/wofocgen-testversion">WoF OC Generator</a> hosted on perchance.org.</p>
+      <p>Written in PHP. <a href="https://git.sr.ht/~wychmire/wofocgen">Opensource</a> and available under the ISC license.</p>
+      <p>Created by Wychmire - Hosted by Heroku</p>
+      <p><?php site_version(); ?></p>
+    </footer>
+  </main>
 </body>
 
 </html>
