@@ -1,5 +1,5 @@
 ## Wings of Fire Character Generator
-A Wings of Fire chraacter generator written in PHP. Based off of the [wofocgen](https://perchance.org/wofocgen-testversion) page on [perchance.org](https://perchance.org/).
+A [Wings of Fire chraacter generator](https://wofocgen.herokuapp.com/) written in PHP. Based off of the [wofocgen](https://perchance.org/wofocgen-testversion) page on [perchance.org](https://perchance.org/).
 
 I've been looking to get into PHP for some time now, and this seemed like a good starter project.
 
