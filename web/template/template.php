@@ -18,7 +18,7 @@
 
   <main>
     <article>
-      <?php require 'includes/generator.php'; ?>
+      <?php require 'generators/simple_character.php'; ?>
     </article>
   </main>
 

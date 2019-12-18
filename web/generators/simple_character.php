@@ -16,10 +16,10 @@ $hybrid_chance = roll(100);
 
 /**
  * $Tribes
- * Read ./resources/tribe/*, ./resources/is_hybrid and randomize entries.
+ * Read ./generators/simple_character/tribe/*, ./generators/simple_character/is_hybrid and randomize entries.
  */
-$tribe_pantala = explode("\n", file_get_contents('./resources/tribe/pantala'));
-$tribe_pyrrhia = explode("\n", file_get_contents('./resources/tribe/pyrrhia'));
+$tribe_pantala = explode("\n", file_get_contents('./generators/simple_character/tribe/pantala'));
+$tribe_pyrrhia = explode("\n", file_get_contents('./generators/simple_character/tribe/pyrrhia'));
 $tribe_options = array_merge($tribe_pantala, $tribe_pyrrhia);
 shuffle($tribe_options);
 
@@ -27,17 +27,17 @@ shuffle($tribe_options);
 
 /**
  * $Body
- * Read ./resources/body/* and randomize entries.
+ * Read ./generators/simple_character/body/* and randomize entries.
  */
 
 // Rank specific horn attributes
-$body_description_nobility = explode("\n", file_get_contents('./resources/body/description_nobility'));
+$body_description_nobility = explode("\n", file_get_contents('./generators/simple_character/body/description_nobility'));
 // Tribe specific body attributes
-$body_description_sea = explode("\n", file_get_contents('./resources/body/description_sea'));
+$body_description_sea = explode("\n", file_get_contents('./generators/simple_character/body/description_sea'));
 // Shared body attributes
-$body_adjective_shared   = explode("\n", file_get_contents('./resources/body/adjective_shared'));
-$body_scale_shared       = explode("\n", file_get_contents('./resources/body/scale_shared'));
-$body_description_shared = explode("\n", file_get_contents('./resources/body/description_shared'));
+$body_adjective_shared   = explode("\n", file_get_contents('./generators/simple_character/body/adjective_shared'));
+$body_scale_shared       = explode("\n", file_get_contents('./generators/simple_character/body/scale_shared'));
+$body_description_shared = explode("\n", file_get_contents('./generators/simple_character/body/description_shared'));
 // Randomize body attributes
 shuffle($body_adjective_shared);
 shuffle($body_scale_shared);
@@ -48,15 +48,15 @@ shuffle($body_description_shared);
 
 /**
  * $Wings
- * Read ./resources/wing/* and randomize entries.
+ * Read ./generators/simple_character/wing/* and randomize entries.
  */
 
 // Tribe specific wing attributes
-$wing_size_hybrid = explode("\n", file_get_contents('./resources/wing/size_hybrid'));
+$wing_size_hybrid = explode("\n", file_get_contents('./generators/simple_character/wing/size_hybrid'));
 // Shared wing attributes
-$wing_appearance_shared = explode("\n", file_get_contents('./resources/wing/appearance_shared'));
-$wing_color_shared      = explode("\n", file_get_contents('./resources/wing/color_shared'));
-$wing_size_shared       = explode("\n", file_get_contents('./resources/wing/size_shared'));
+$wing_appearance_shared = explode("\n", file_get_contents('./generators/simple_character/wing/appearance_shared'));
+$wing_color_shared      = explode("\n", file_get_contents('./generators/simple_character/wing/color_shared'));
+$wing_size_shared       = explode("\n", file_get_contents('./generators/simple_character/wing/size_shared'));
 // Randomize wing attributes
 shuffle($wing_size_hybrid);
 shuffle($wing_appearance_shared);
@@ -67,15 +67,15 @@ shuffle($wing_size_shared);
 
 /**
  * $_horns
- * Read ./resources/horn/* and randomize entries.
+ * Read ./generators/simple_character/horn/* and randomize entries.
  */
 
 // Rank specific horn attributes
-$horn_appearance_nobility = explode("\n", file_get_contents('./resources/horn/appearance_nobility'));
-$horn_size_nobility       = explode("\n", file_get_contents('./resources/horn/size_nobility'));
+$horn_appearance_nobility = explode("\n", file_get_contents('./generators/simple_character/horn/appearance_nobility'));
+$horn_size_nobility       = explode("\n", file_get_contents('./generators/simple_character/horn/size_nobility'));
 // Shared horn attributes
-$horn_appearance_shared = explode("\n", file_get_contents('./resources/horn/appearance_shared'));
-$horn_size_shared       = explode("\n", file_get_contents('./resources/horn/size_shared'));
+$horn_appearance_shared = explode("\n", file_get_contents('./generators/simple_character/horn/appearance_shared'));
+$horn_size_shared       = explode("\n", file_get_contents('./generators/simple_character/horn/size_shared'));
 // Randomize horn attributes
 shuffle($horn_appearance_shared);
 shuffle($horn_size_shared);
@@ -84,16 +84,16 @@ shuffle($horn_size_shared);
 
 /**
  * $_locations
- * Read ./resources/location/* and randomize the entries.
+ * Read ./generators/simple_character/location/* and randomize the entries.
  */
 
 // Tribe specific locations
-$location_hive_silk = explode("\n", file_get_contents('./resources/location/hive_silk'));
-$location_ice      = explode("\n", file_get_contents('./resources/location/ice'));
-$location_leaf     = explode("\n", file_get_contents('./resources/location/leaf'));
+$location_hive_silk = explode("\n", file_get_contents('./generators/simple_character/location/hive_silk'));
+$location_ice      = explode("\n", file_get_contents('./generators/simple_character/location/ice'));
+$location_leaf     = explode("\n", file_get_contents('./generators/simple_character/location/leaf'));
 // Shared locations
-$location_pantala_shared = explode("\n", file_get_contents('./resources/location/pantala_shared'));
-$location_pyrrhia_shared = explode("\n", file_get_contents('./resources/location/pyrrhia_shared'));
+$location_pantala_shared = explode("\n", file_get_contents('./generators/simple_character/location/pantala_shared'));
+$location_pyrrhia_shared = explode("\n", file_get_contents('./generators/simple_character/location/pyrrhia_shared'));
 // Randomize tribe locations
 shuffle($location_hive_silk);
 shuffle($location_ice);
@@ -105,14 +105,14 @@ shuffle($location_pyrrhia_shared);
 
 /**
  * $Jobs
- * Read ./resources/job/* and randomize entries.
+ * Read ./generators/simple_character/job/* and randomize entries.
  */
 
 // Tribe specific jobs
 // _leafWing incompatable jobs
-$job_remove_leaf = explode("\n", file_get_contents('./resources/job/remove_leaf'));
+$job_remove_leaf = explode("\n", file_get_contents('./generators/simple_character/job/remove_leaf'));
 // Shared jobs
-$job_shared = explode("\n", file_get_contents('./resources/job/shared'));
+$job_shared = explode("\n", file_get_contents('./generators/simple_character/job/shared'));
 // Randomize jobs
 shuffle($job_shared);
 
@@ -120,11 +120,11 @@ shuffle($job_shared);
 
 /**
  * $Hobby
- * Read ./resources/hobby/* and randomize entries.
+ * Read ./generators/simple_character/hobby/* and randomize entries.
  */
 
 // Shared hobbies
-$hobby_shared = explode("\n", file_get_contents('./resources/hobby/shared'));
+$hobby_shared = explode("\n", file_get_contents('./generators/simple_character/hobby/shared'));
 // Randomize hobbies
 shuffle($hobby_shared);
 
@@ -132,12 +132,12 @@ shuffle($hobby_shared);
 
 /**
  * $Status
- * Read ./resources/status/* and randomize entries.
+ * Read ./generators/simple_character/status/* and randomize entries.
  */
 
 // Shared statuses
-$status_shared  = explode("\n", file_get_contents('./resources/status/shared'));
-$status_pyrrhia = explode("\n", file_get_contents('./resources/status/pyrrhia'));
+$status_shared  = explode("\n", file_get_contents('./generators/simple_character/status/shared'));
+$status_pyrrhia = explode("\n", file_get_contents('./generators/simple_character/status/pyrrhia'));
 // Randomize statuses
 shuffle($status_shared);
 shuffle($status_pyrrhia);
