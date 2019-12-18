@@ -66,7 +66,7 @@ shuffle($wing_size_shared);
 
 
 /**
- * $_horns
+ * $Horns
  * Read ./generators/simple_character/horn/* and randomize entries.
  */
 
@@ -83,7 +83,7 @@ shuffle($horn_size_shared);
 
 
 /**
- * $_locations
+ * $Locations
  * Read ./generators/simple_character/location/* and randomize the entries.
  */
 
