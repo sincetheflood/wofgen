@@ -24,6 +24,11 @@ function roll($sides)
   return mt_rand(1, $sides);
 }
 
+function read_arrayify($file)
+{
+  return explode("\n", file_get_contents('./generators/' . "$file"));
+}
+
 /**
  * Starts everything and displays the template.
  */
