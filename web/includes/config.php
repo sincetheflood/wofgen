@@ -7,11 +7,13 @@
  */
 function config($key = '')
 {
-  $config = [
-    'name' => 'Wings of Fire Character Generator',
-    'template_path' => 'template',
-    'content_path' => 'content',
-    'version' => 'v2019.12.19',
-  ];
-  return isset($config[$key]) ? $config[$key] : null;
+    $config = [
+        'name' => 'Wings of Fire Generators',
+        'site_url' => 'https://wofgen.herokuapp.com',
+        'template_path' => 'template',
+        'content_path' => 'content',
+        'version' => 'v2019.12.20',
+    ];
+
+    return isset($config[$key]) ? $config[$key] : null;
 }
