@@ -13,11 +13,13 @@
 <body>
 
   <header>
+    <!-- Load site title -->
     <h1><?php site_name(); ?></h1>
   </header>
 
   <main>
     <article>
+      <!-- Load the generator -->
       <?php require 'generators/simple_character.php'; ?>
     </article>
   </main>
