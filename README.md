@@ -1,4 +1,7 @@
 ## Wings of Fire Character Generator
+
+![Example screenshot](https://git.sr.ht/~wychmire/wofocgen/raw/default/example.gif)
+
 A [Wings of Fire chraacter generator](https://wofocgen.herokuapp.com/) written in PHP. Based off of the [wofocgen](https://perchance.org/wofocgen-testversion) page on [perchance.org](https://perchance.org/). I found the original to be a cool idea (Akin to [Chaotic Shiny](http://chaoticshiny.com/), which I love), but severely lacking in logic.
 In my personal opinion, a HiveWing should not only be unable to be a General in the SeaWing's Summer Palace, they also shouldn't be able to be a wanted criminal at the same time. Thus I decided to rewrite it.
 
