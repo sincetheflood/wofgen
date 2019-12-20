@@ -11,7 +11,7 @@ function config($key = '')
     'name' => 'Wings of Fire Character Generator',
     'template_path' => 'template',
     'content_path' => 'content',
-    'version' => 'v2019.12.17',
+    'version' => 'v2019.12.19',
   ];
   return isset($config[$key]) ? $config[$key] : null;
 }
