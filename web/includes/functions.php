@@ -24,6 +24,9 @@ function roll($sides)
   return mt_rand(1, $sides);
 }
 
+/**
+ * Read a file and split each line into an array entry
+ */
 function read_arrayify($file)
 {
   return explode("\n", file_get_contents('./generators/' . "$file"));
