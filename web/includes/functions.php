@@ -62,7 +62,7 @@ function read_arrayify($file)
 }
 
 function reload_page() {
-  print '<p class="reload"><a href="" onclick="window.location.reload(false);">Reload</a> the page to generate a new options.<noscript> (Enable Javascript to use the link)</noscript></p>';
+  print '<section><p><a href="" onclick="window.location.reload(false);">Reload</a> the page to generate new options.<noscript> (Enable Javascript to use the link)</noscript></p></section>';
 }
 
 /**
