@@ -19,11 +19,12 @@ shuffle($name_options);
 /*------------------------------------*\
 #PRINT
 \*------------------------------------*/
+
+reload_page();
+
 print "<p>Note: there are currently very few SandWing names available, so there may be frequant duplicates.";
 print "<p>$name_options[0]</p>";
 print "<p>$name_options[1]</p>";
 print "<p>$name_options[2]</p>";
 print "<p>$name_options[3]</p>";
 print "<p>$name_options[4]</p>";
-
-reload_page();
