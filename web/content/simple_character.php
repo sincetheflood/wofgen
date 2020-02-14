@@ -288,8 +288,7 @@ if (array_search("$tribe", $tribe_pyrrhia) || $is_hybrid === true) {
 #PRINT
 \*------------------------------------*/
 
-print "<p>This dragon is $body_adjective_shared[0] $tribe with $body_scale_shared[0] scales. Their wings are $wing_size_options[0] and $wing_appearance_shared[0], $wing_color_shared[0]. They have $body_description_options[0] and $horn_size_options[0] $horn_appearance_options[0].</p>";
-
-print "<p>They are $job_options_adjusted[0] and live $location_options[0]. They $hobby_options[0] and $status_options[0].</p>";
-
 reload_page();
+
+print "<p>This dragon is $body_adjective_shared[0] $tribe with $body_scale_shared[0] scales. Their wings are $wing_size_options[0] and $wing_appearance_shared[0], $wing_color_shared[0]. They have $body_description_options[0] and $horn_size_options[0] $horn_appearance_options[0].</p>";
+print "<p>They are $job_options_adjusted[0] and live $location_options[0]. They $hobby_options[0] and $status_options[0].</p>";
