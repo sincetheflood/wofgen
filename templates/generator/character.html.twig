@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GeneratorController!{% endblock %}
+
+{% block body %}
+    <h2>Simple Character Generator</h2>
+
+    <form method="post">
+        <button type="submit">Generate New Character</button>
+    </form>
+
+    <p>
+        This dragon is {{ character.appearance.body.adjective }}
+        {% if character.status.isHybrid %}
+            {%- for tribe in character.tribes %}
+                {{ tribe }}{{ not loop.last ? ' and ' }}
+            {% endfor %}
+            hybrid
+        {% else %}
+            {{ character.tribes|first }}
+        {% endif %}
+        with {{ character.appearance.scales.adjective }} scales. Their wings are {{ character.appearance.wings.size }}
+        and {{ character.appearance.wings.adjective }}, {{ character.appearance.wings.description }}. They
+        have {{ character.appearance.body.description }}
+        and {{ character.appearance.horns.adjective }} {{ character.appearance.horns.description }}.
+    </p>
+
+    <p>
+        They are {{ character.about.job }} and live {{ character.about.location }}. They {{ character.about.hobby }}
+        and {{ character.about.status }}.
+    </p>
+
+{% endblock %}
