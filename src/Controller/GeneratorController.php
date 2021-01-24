@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\Names;
 use App\Service\SimpleCharacter;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -64,6 +65,35 @@ class GeneratorController extends AbstractController
             'controller_name' => 'GeneratorController',
 
             'character' => $characterData,
+        ]);
+    }
+
+    /**
+     * @Route("/names/{tribe}", name="names")
+     */
+    public function names(Names $names, $tribe): Response
+    {
+        $filesystem = new Filesystem();
+
+        $dir = dirname(__DIR__) . '/GeneratorFiles/names';
+
+        if ($filesystem->exists($dir . '/' . $tribe . '.txt') === false) {
+            throw $this->createNotFoundException();
+        }
+
+        if($tribe === 'nightwings') {
+            $tribeHasSplitNames = true;
+        } else {
+            $tribeHasSplitNames = false;
+        }
+
+        $nameList = $names->generate($dir . '/' . $tribe, $tribeHasSplitNames, 10);
+
+        return $this->render('generator/names.html.twig', [
+            'controller_name' => 'GeneratorController',
+
+            'tribe' => $tribe,
+            'names' => $nameList,
         ]);
     }
 }
