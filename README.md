@@ -1,18 +1,14 @@
-## Wings of Fire Character Generator
+## WoFGen: Wings of Fire Generators
 
-![Example screenshot](https://git.sr.ht/~wychmire/wofocgen/blob/master/example.gif)
+[WoFGen](https://wofgen.himmalerin.com/) is a simple Wings of Fire-related generator written in PHP using the [Symfony](https://symfony.com/) framework.
 
-A [Wings of Fire chraacter generator](https://wofgen.herokuapp.com/) written in PHP. Based off of the [wofocgen](https://perchance.org/wofocgen-testversion) page on [perchance.org](https://perchance.org/). I found the original to be a cool idea (Akin to [Chaotic Shiny](http://chaoticshiny.com/), which I love), but severely lacking in logic.
-In my personal opinion, a HiveWing should not only be unable to be a General in the SeaWing's Summer Palace, they also shouldn't be able to be a wanted criminal at the same time. Thus I decided to rewrite it.
+### Features
 
-I've been looking to get into PHP for some time now, and this seemed like a good starter project.
+-   Simple character generator
+-   Name generators for each tribe
+-   Minimal CSS and no JS for almost-instant page loads
 
-Benefits of the re-write:
-
--   Loads almost instantaneously. Under a simulated 3G connection my rewrite loads in less than half a second*, the perchance generator takes ~2 seconds to load just the text and ~9 seconds to completely finish.
--   More realistic options. For example, only IceWings will live in the Ice Palace, and only LeafWings will live in the Poison Jungle. Dragons from Pyrrhia will not be living in Pantala (and vice versa). Unless they're hybrids, Pantalan dragons will not be able to possess animus powers.
-
-*: When not in use the site will "fall asleep", increasing the first load time. Once awake the site should load within the given timespan.
+Originally based off of the [wofocgen](https://perchance.org/wofocgen-testversion) page on [perchance.org](https://perchance.org/).
 
 ### License
-All files except those that are in the `web/resources/` directory are under the ISC License. Files in the `web/resources/` directory are in the public domain.
+All source code is available under the ISC license (See the `LICENSE` file), and the generator source files are available under the CC0 License (See the `src/GeneratorFiles/LICENSE` file).
