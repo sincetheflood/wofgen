@@ -28,10 +28,21 @@ class SimpleCharacter
         }
 
         // Get the dragon's about
-        $about = $this->buildAbout($generatorFiles['about'], $tribe, $statuses['isCriminal'], $statuses['isNobility']);
+        $about = $this->buildAbout(
+            $generatorFiles['about'],
+            $tribe,
+            $statuses['isCriminal'],
+            $statuses['isHybrid'],
+            $statuses['isNobility']
+        );
 
         // Get the dragon's appearance
-        $appearance = $this->buildAppearance($generatorFiles['body'], $tribe, $statuses['isHybrid'], $statuses['isNobility']);
+        $appearance = $this->buildAppearance(
+            $generatorFiles['body'],
+            $tribe,
+            $statuses['isHybrid'],
+            $statuses['isNobility']
+        );
 
         return [
             'status' => $statuses,
@@ -111,9 +122,10 @@ class SimpleCharacter
      * @param array|string $tribe
      * @param bool $isCriminal
      * @param bool $isHybrid
+     * @param bool $isNobility
      * @return array
      */
-    private function buildAbout(array $files, $tribe, bool $isCriminal, bool $isHybrid): array
+    private function buildAbout(array $files, $tribe, bool $isCriminal, bool $isHybrid, bool $isNobility): array
     {
         if ($tribe === ('HiveWing' || 'LeafWing' || 'SilkWing')) {
             $continent = 'Pantala';
@@ -169,9 +181,17 @@ class SimpleCharacter
         // Job
         $job = $this->loadFile($files['job.txt']);
 
+        $jobNobility = $this->loadFile($files['job-nobility.txt']);
+
         $jobRemoveCriminal = $this->loadFile($files['job-remove-criminal.txt']);
         $jobRemoveIsland = $this->loadFile($files['job-remove-island.txt']);
         $jobRemoveLeafWing = $this->loadFile($files['job-remove-leafwing.txt']);
+
+        // If the dragon is a LeafWing or LeafWing hybrid
+        if ($isNobility) {
+            array_push($job, ...$jobNobility);
+            shuffle($job);
+        }
 
         if ($isCriminal) {
             $job = array_merge(

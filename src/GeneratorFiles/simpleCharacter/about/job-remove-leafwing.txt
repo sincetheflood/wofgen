@@ -19,10 +19,18 @@ a cobbler
 a constable
 a cooper
 a cowherd
+a doctor
+a dressmaker
 a falconer
+a farmer
 a fishmonger
 a fletcher
+a forester
+a fortune-teller
+a fruit farmer
 a furrier
+a geologist
+a glassblower
 a goldsmith
 a grocer
 a groom
@@ -32,6 +40,7 @@ a herald
 a huntsman
 a jester
 a jeweler
+a judge
 a librarian
 a mason
 a metalsmith
@@ -39,13 +48,17 @@ a miller
 a miner
 a minstrel
 a moneylender
+a novelist
+a nurse
 a painter
 a peddler
 a physician
 a plowman
+a politician
 a potter
 a saddler
 a sailor
+a salesdragon
 a seamstress
 a silversmith
 a slave
@@ -53,6 +66,7 @@ a spice merchant
 a steward
 a tailor
 a watchman
+a welder
 an actor
 an apothecary
 an architect
