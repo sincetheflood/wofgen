@@ -5,9 +5,22 @@
 {% block body %}
     <h2>Wings of Fire Generators</h2>
 
+    <h3>Character Generators</h3>
     <ul>
-        {% for generatorName, generator in generators %}
-            <li><a href="{{ path(generator) }}">{{ generatorName }} Generator</a></li>
-        {% endfor %}
+        <li><a href="{{ path('app_generator_simple_character') }}">Simple Character Generator</a></li>
+    </ul>
+
+    <h3>Name Generators</h3>
+    <ul>
+        <li><a href="{{ path('app_generator_names', {tribe: 'hivewings'}) }}">HiveWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'icewings'}) }}">IceWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'leafwings'}) }}">LeafWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'mudwings'}) }}">MudWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'nightwings'}) }}">NightWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'rainwings'}) }}">RainWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'sandwings'}) }}">SandWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'seawings'}) }}">SeaWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'silkwings'}) }}">SilkWing Name Generator</a></li>
+        <li><a href="{{ path('app_generator_names', {tribe: 'skywings'}) }}">SkyWing Name Generator</a></li>
     </ul>
 {% endblock %}
