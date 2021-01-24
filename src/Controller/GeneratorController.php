@@ -60,7 +60,7 @@ class GeneratorController extends AbstractController
 
         $characterData = $character->build($generatorFiles);
 
-        return $this->render('generator/character.html.twig', [
+        return $this->render('generator/simple_character.html.twig', [
             'controller_name' => 'GeneratorController',
 
             'character' => $characterData,
