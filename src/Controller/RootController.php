@@ -5,13 +5,10 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Routing\RouterInterface;
 
 class RootController extends AbstractController
 {
-    /**
-     * @Route("/", name="app_index")
-     */
+    #[Route('/', name: 'app_index')]
     public function index(): Response
     {
         return $this->render('root/index.html.twig', [

@@ -4,25 +4,17 @@ namespace App\Controller;
 
 use App\Service\Names;
 use App\Service\SimpleCharacter;
-use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use function dirname;
 
-/**
- * @Route("/generator", name="app_generator_")
- */
+#[Route('/generator/', name: 'app_generator_')]
 class GeneratorController extends AbstractController
 {
-    /**
-     * @Route("/simple-character", name="simple_character")
-     * @param SimpleCharacter $character
-     * @return Response
-     */
+    #[Route('simple-character', name: 'simple_character')]
     public function simpleCharacter(SimpleCharacter $character): Response
     {
         $dir = dirname(__DIR__) . '/GeneratorFiles/simpleCharacter';
@@ -68,9 +60,7 @@ class GeneratorController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/names/{tribe}", name="names")
-     */
+    #[Route('names/{tribe}', name: 'names')]
     public function names(Names $names, $tribe): Response
     {
         $filesystem = new Filesystem();
@@ -81,7 +71,7 @@ class GeneratorController extends AbstractController
             throw $this->createNotFoundException();
         }
 
-        if($tribe === 'nightwings') {
+        if ($tribe === 'nightwings') {
             $tribeHasSplitNames = true;
         } else {
             $tribeHasSplitNames = false;
