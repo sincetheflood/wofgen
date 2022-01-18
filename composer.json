@@ -1,6 +1,6 @@
 {
     "type": "project",
-    "license": "proprietary",
+    "license": "ISC",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
@@ -12,6 +12,7 @@
         "symfony/dotenv": "6.0.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "6.0.*",
+        "symfony/requirements-checker": "^2.0",
         "symfony/runtime": "6.0.*",
         "symfony/twig-bundle": "6.0.*",
         "symfony/yaml": "6.0.*",
@@ -54,6 +55,7 @@
     },
     "scripts": {
         "auto-scripts": {
+            "vendor/bin/requirements-checker": "php-script",
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
