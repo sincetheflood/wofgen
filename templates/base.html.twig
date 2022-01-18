@@ -11,8 +11,12 @@
     {% block stylesheets %}{{ include('_includes/_site_css.html.twig') }}{% endblock %}
 </head>
 <body>
+<header>
+    <nav>
+        <a href="{{ path('app_index') }}">Home</a>
+    </nav>
+</header>
 <main>
-    <a href="{{ path('app_index') }}">Home</a>
     {% block body %}{% endblock %}
 </main>
 {% block footer %}{{ include('_includes/_footer.html.twig') }}{% endblock %}
